@@ -1,4 +1,8 @@
 node {
+    stage('Preparation') { // for display purposes
+        // Get some code from a GitHub repository
+        git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+    }
     def mvnHome = tool 'Maven 3.8.1'
     stage('Build') {
         // Run the maven build
